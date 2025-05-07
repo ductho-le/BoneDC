@@ -1,0 +1,9 @@
+# Ignore MATLAB backup files
+*.asv
+
+# Ignore Mac system file
+.DS_Store
+
+# Ignore external function
+chebdif.m
+
