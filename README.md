@@ -59,15 +59,15 @@ matlab -r "edit('BoneDC_visco.m')"
 
 ## References
 
-If you find this code useful, please cite our papers:
+If you use this code in your work, please cite the following papers:
 
-1. **Le et al. (2025)**, _Guided waves in anisotropic and viscoelastic stratified plates: Application to bone quantitative ultrasound_, Computers and Structures, DOI: [10.1016/j.compstruc.2025.107820](https://doi.org/10.1016/j.compstruc.2025.107820)
-2. **Le et al. (2024)**, _Robust guided wave inversion for estimating bone thickness and elasticity_, _J. Acoust. Soc. Am._, DOI: [10.1121/10.0034604](https://doi.org/10.1121/10.0034604)
+1. **Le et al. (2025)**, Guided waves in anisotropic and viscoelastic stratified plates: Application to bone quantitative ultrasound, _Computers and Structures_, DOI: [10.1016/j.compstruc.2025.107820](https://doi.org/10.1016/j.compstruc.2025.107820)
+2. **Le et al. (2024)**, Robust guided wave inversion for estimating bone thickness and elasticity, _J. Acoust. Soc. Am._, DOI: [10.1121/10.0034604](https://doi.org/10.1121/10.0034604)
 
-Further reading:
+### Further reading:
 
-3. Trefethen (2000), _Spectral Methods in MATLAB_, _SIAM_, DOI: [10.1137/1.9780898719598](https://doi.org/10.1137/1.9780898719598)  
-4. Adamou et al. (2004), _Spectral methods for modelling guided waves in elastic media_, _J. Acoust. Soc. Am._, DOI: [10.1121/1.1777871](https://doi.org/10.1121/1.1777871)
+3. Trefethen (2000), Spectral Methods in MATLAB, _SIAM_, DOI: [10.1137/1.9780898719598](https://doi.org/10.1137/1.9780898719598)  
+4. Adamou et al. (2004), Spectral methods for modelling guided waves in elastic media, _J. Acoust. Soc. Am._, DOI: [10.1121/1.1777871](https://doi.org/10.1121/1.1777871)
 
 Readers may also refer to the single‑solid‑layer implementation by Daniel Kiefer: [@GEW_dispersion_script](https://github.com/dakiefer/GEW_dispersion_script)
 
