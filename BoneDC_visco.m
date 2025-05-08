@@ -165,5 +165,5 @@ function plotDispersion23D(f0,AK,SK,layer)
     clim(ax1,[0,att]);
     set(ax1,'FontSize',12);
 
-    print(gcf, '2D_dispersion_visco.svg', '-dsvg', '-vector', '-r300');
+    % print(gcf, '2D_dispersion_visco.svg', '-dsvg', '-vector', '-r300');
 end
