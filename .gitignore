@@ -4,6 +4,3 @@
 # Ignore Mac system file
 .DS_Store
 
-# Ignore external function
-chebdif.m
-
