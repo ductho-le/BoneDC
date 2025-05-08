@@ -39,7 +39,7 @@ attenuation waves in green (symmetric) and yellow (antisymmetric).</em>
 - Parallel Computing Toolbox  
 - `chebdif` function (or an equivalent Chebyshev differentiation function) – [@DMSUITE](https://www.mathworks.com/matlabcentral/fileexchange/29-dmsuite) by J.A.C Weideman
 
-ℹ️ *The `chebdif.m` is included with permission from Prof. J.A.C. Weideman. Please cite his original work when using it.*
+ℹ️ *The `chebdif.m` function is included with permission from Prof. J.A.C. Weideman. Please cite his original work when using it.*
 
 ## Getting Started
 
