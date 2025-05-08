@@ -17,14 +17,14 @@ h = 4e-3;  N = 20;   [c,n,rho,dof] = f_CB_Aniso('Lamb');            % CB
 ht = 1e-3; Nt = 20; rhot = 1e3; clt = 1500; lamt = rhot*clt^2; nt = 1.97; % ST
 hb = 1e-3; Nb = 20; rhob = 930; clb = 1480; lamb = rhob*clb^2; nb = 1.97; % MR
 
-%% 3D dispersion curves
+%% 2D and 3D dispersion curves
 Timer = tic;
 f0 = linspace(100,1e6,500).';
 [AK, SK] = solveWavenumber(f0,layer,c,n,rho,N,h,...
                        lamt,nt,rhot,Nt,ht, ...
                        lamb,nb,rhob,Nb,hb,dof);
-fprintf("3D time: %.2f s\n",toc(Timer));
-plotDispersion3D(f0,AK,SK,layer);
+fprintf("Calculation time: %.2f s\n",toc(Timer));
+plotDispersion23D(f0,AK,SK,layer);
 
 %% ---------------------- Helper functions --------------------------------
 function [AK, SK] = solveWavenumber(f0,layer,c,n,rho,N,h,...
@@ -53,7 +53,8 @@ function [AK, SK] = solveWavenumber(f0,layer,c,n,rho,N,h,...
     end
 end
 
-function plotDispersion3D(f0,AK,SK,layer)
+function plotDispersion23D(f0,AK,SK,layer)
+%%% 3D plot
     dom.kr = [-4 4];   % real(k)  axis limits (rad/mm)
     dom.ki = [-4 4];   % imag(k)  axis limits (Np/mm)
     dom.f  = [ 0 1];   % freq     axis limits (MHz)
@@ -117,4 +118,51 @@ function plotDispersion3D(f0,AK,SK,layer)
     view(axs(4),[ 0 90]); title(axs(4),'\bf{d)}','Interpreter','latex');
 
     % print(gcf, '3D_dispersion_visco.svg', '-dsvg', '-vector', '-r300');
+    
+%%% 2D plot
+    % --- Prepare data (cp in km/s, att in Np/mm) ---
+    SCP = 2*pi * FMHz(maskLS) * 1e6 ./ real(SKL);
+    ACP = 2*pi * FMHz(maskLA) * 1e6 ./ real(AKL);
+    cpS = SCP/1e3;                cpA = ACP/1e3;      % → km/s
+    attS = -imag(SKL)/1e3;        attA = -imag(AKL)/1e3;
+    fS  = FMHz(maskLS);           fA  = FMHz(maskLA);
+    
+    % --- Figure 2: 1×2 panels ---
+    fig2 = figure('Name','2D Dispersion & Attenuation', ...
+                  'Units','normalized','Position',[0.25 0.25 0.6 0.4]);
+    tl2  = tiledlayout(fig2,1,2,'Padding','compact','TileSpacing','compact');
+    
+    % Mode colors
+    cols = {{'b','r'},{'k','k'}};  sel = 1+(layer>=2);
+    [cS, cA] = cols{sel}{:};
+
+    % a) f vs attenuation
+    ax2 = nexttile(tl2,1); hold(ax2,'on');
+    scatter(ax2, fS, attS, 10, cS, 'filled');
+    scatter(ax2, fA, attA, 10, cA, 'filled');
+    xlabel(ax2,'$f$ (MHz)','Interpreter','latex');
+    ylabel(ax2,'Attenuation (Np/mm)','Interpreter','latex');
+    title(ax2,'\bf{a)}','Interpreter','latex');
+    xlim(ax2,[0,1]); ylim(ax2,[0,att]);
+    grid(ax2,'on'); box(ax2,'on');
+    set(ax2,'FontSize',12);
+    
+    % b) f vs cp, colored by attenuation
+    ax1 = nexttile(tl2,2); hold(ax1,'on');
+    scatter(ax1, fS,  cpS,  10, attS, 'filled');
+    scatter(ax1, fA,  cpA,  10, attA, 'filled');
+    xlabel(ax1,'$f$ (MHz)','Interpreter','latex');
+    ylabel(ax1,'$c_p$ (km/s)','Interpreter','latex');
+    title(ax1,'\bf{b)}','Interpreter','latex');
+    xlim(ax1,[0,1]); ylim(ax1,[0, 10]);
+    grid(ax1,'on'); box(ax1,'on');
+    colormap(ax1,flipud(jet));
+    cbar = colorbar(ax1);
+    cbar.Label.Interpreter = 'latex';
+    cbar.Label.String      = 'Attenuation (Np/mm)';
+    cbar.Ticks             = 0:0.02:0.1;
+    clim(ax1,[0,att]);
+    set(ax1,'FontSize',12);
+
+    % print(gcf, '2D_dispersion_visco.svg', '-dsvg', '-vector', '-r300');
 end
