@@ -33,6 +33,11 @@ their two-dimensional views (b, c, d). Low-attenuation waves in blue (symmetric)
 attenuation waves in green (symmetric) and yellow (antisymmetric).</em>
 </div>
 
+![Description](Figures/2D_dispersion_visco.svg)  
+<div align="center">
+<em>Figure 2. Two-dimensional dispersion curves of waves in an <strong>viscoelastic</strong> cortical bone plate. a) Phase velocity superimposed by attenuation spectra; b) Attenuation vs Frequency (symmetric modes in blue and Antisymmetric modes in red).</em>
+</div>
+
 ## Requirements
 
 - MATLAB (R2021b or newer recommended)  
