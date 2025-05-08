@@ -37,7 +37,7 @@ attenuation waves in green (symmetric) and yellow (antisymmetric).</em>
 
 - MATLAB (R2021b or newer recommended)  
 - Parallel Computing Toolbox  
-- `chebdif` function (or an equivalent Chebyshev differentiation function) – [@DMSUITE by J.A.C Weideman](https://www.mathworks.com/matlabcentral/fileexchange/29-dmsuite)
+- `chebdif` function (or an equivalent Chebyshev differentiation function) – [@DMSUITE](https://www.mathworks.com/matlabcentral/fileexchange/29-dmsuite) by J.A.C Weideman
 
 ℹ️ *Included with permission from Prof. J.A.C. Weideman. Please cite his original work when using `chebdif.m`.*
 
@@ -68,10 +68,18 @@ If you use this code in your work, please cite the following papers:
 
 ### Further reading:
 
-3. Trefethen (2000), Spectral Methods in MATLAB, _SIAM_, DOI: [10.1137/1.9780898719598](https://doi.org/10.1137/1.9780898719598)  
-4. Adamou et al. (2004), Spectral methods for modelling guided waves in elastic media, _J. Acoust. Soc. Am._, DOI: [10.1121/1.1777871](https://doi.org/10.1121/1.1777871)
+- Trefethen (2000), Spectral Methods in MATLAB, _SIAM_, DOI: [10.1137/1.9780898719598](https://doi.org/10.1137/1.9780898719598)  
+- Adamou et al. (2004), Spectral methods for modelling guided waves in elastic media, _J. Acoust. Soc. Am._, DOI: [10.1121/1.1777871](https://doi.org/10.1121/1.1777871)
 
-Readers may also refer to the single‑solid‑layer implementation by Daniel Kiefer: [@GEW_dispersion_script](https://github.com/dakiefer/GEW_dispersion_script)
+### Other Repositories on Guided Wave Dispersion:
+- [@Dispersion-Calculator](https://github.com/ArminHuber/Dispersion-Calculator) by Armin Huber  
+- [@Lamb-Wave-Dispersion](https://github.com/franciscorotea/Lamb-Wave-Dispersion) by Francisco Rotea  
+- [@GEW_dispersion_script](https://github.com/dakiefer/GEW_dispersion_script) by Daniel Kiefer  
+- [@PyDispersion](https://github.com/luan-th-nguyen/PyDispersion) by Luan Nguyen  
+- [@waveguicsx](https://github.com/Universite-Gustave-Eiffel/waveguicsx) by Université Gustave Eiffel  
+- [@The-Dispersion-Box](https://github.com/adilorta/The-Dispersion-Box) by Adil Han Orta  
+- [@SAMWISE](https://github.com/haukegravenkamp/SAMWISE) by Hauke Gravenkamp  
+- [@pydisperse](https://github.com/nmbader/pydisperse) by Milad Bader
 
 ## License
 
