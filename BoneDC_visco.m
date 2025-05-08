@@ -129,7 +129,8 @@ function plotDispersion23D(f0,AK,SK,layer)
     
     % --- Figure 2: 1×2 panels ---
     fig2 = figure('Name','2D Dispersion & Attenuation', ...
-                  'Units','normalized','Position',[0.25 0.25 0.6 0.4]);
+                  'Units','normalized','Position',[0.25 0.25 0.5 0.4]);
+    % set(groot, 'DefaultAxesFontSize', 12, 'DefaultTextFontSize',   12);
     tl2  = tiledlayout(fig2,1,2,'Padding','compact','TileSpacing','compact');
     
     % Mode colors
@@ -164,5 +165,5 @@ function plotDispersion23D(f0,AK,SK,layer)
     clim(ax1,[0,att]);
     set(ax1,'FontSize',12);
 
-    % print(gcf, '2D_dispersion_visco.svg', '-dsvg', '-vector', '-r300');
+    print(gcf, '2D_dispersion_visco.svg', '-dsvg', '-vector', '-r300');
 end
