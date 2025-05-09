@@ -76,7 +76,7 @@ If you use this code in your work, please cite the following papers:
 - Trefethen (2000), Spectral Methods in MATLAB, _SIAM_, DOI: [10.1137/1.9780898719598](https://doi.org/10.1137/1.9780898719598)  
 - Adamou et al. (2004), Spectral methods for modelling guided waves in elastic media, _J. Acoust. Soc. Am._, DOI: [10.1121/1.1777871](https://doi.org/10.1121/1.1777871)
 
-### Other Repositories on Guided Wave Dispersion:
+### Check out these repos for other dispersion calculations:
 - [@Dispersion-Calculator](https://github.com/ArminHuber/Dispersion-Calculator) by Armin Huber  
 - [@Lamb-Wave-Dispersion](https://github.com/franciscorotea/Lamb-Wave-Dispersion) by Francisco Rotea  
 - [@GEW_dispersion_script](https://github.com/dakiefer/GEW_dispersion_script) by Daniel Kiefer  
