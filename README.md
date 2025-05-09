@@ -35,7 +35,7 @@ attenuation waves in green (symmetric) and yellow (antisymmetric).</em>
 
 ![Description](Figures/2D_dispersion_visco.svg)  
 <div align="center">
-<em>Figure 2. Two-dimensional dispersion curves of waves in a <strong>viscoelastic</strong> cortical bone plate. a) Attenuation vs Frequency (symmetric modes in blue and Antisymmetric modes in red); b) Phase velocity superimposed by attenuation spectra.</em>
+<em>Figure 4. Two-dimensional dispersion curves of waves in a <strong>viscoelastic</strong> cortical bone plate. a) Attenuation vs Frequency (symmetric modes in blue and Antisymmetric modes in red); b) Phase velocity superimposed by attenuation spectra.</em>
 </div>
 
 ## Requirements
