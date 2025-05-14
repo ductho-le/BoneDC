@@ -5,7 +5,11 @@
 A detailed explanation of this implementation is provided in *Ref. [1]*.
 
 ## Acknowledgment:
-This code was inspired by [@GEW_dispersion_script](https://github.com/dakiefer/GEW_dispersion_script) by Daniel Kiefer. In particular, the implementation of the tensor-based matrices and the boundary conditions for a single cortical bone layer (see lines 20–30 in f_matrix_generation.m) builds upon the structure and ideas from his original work. Please refer to his repository for further details and insights.
+- This code was inspired by [@GEW_dispersion_script](https://github.com/dakiefer/GEW_dispersion_script) by Daniel Kiefer. In particular, the implementation of the tensor-based matrices and the boundary conditions for a single cortical bone layer (see lines 20–30 in f_matrix_generation.m) builds upon the structure and ideas from his original work. Please refer to his repository for further details and insights.
+- Variable naming and the basic idea of the Spectral Collocation Method (SCM) were also influenced by MATLAB code from A. T. I. Adamou and R. V. Craster; see [Adamou et al. (2004)](https://doi.org/10.1121/1.1777871).  
+- Special thanks to Prof. J.A.C. Weideman for granting permission to use the `chebdif` function.
+
+While we acknowledge helpful ideas from existing resources, the mathematical derivations and code architecture were developed independently to support more complex modeling tasks. This repository is not affiliated with any referenced authors or projects.
 
 ## Key Features
 
