@@ -5,7 +5,7 @@
 A detailed explanation of this implementation is provided in *Ref. [1]*.
 
 ## Acknowledgment:
-This code was inspired by [@GEW_dispersion_script](https://github.com/dakiefer/GEW_dispersion_script) by Daniel Kiefer. In particular, the implementation of the tensor stiffness matrix and boundary condition operators (see lines 20–30 in f_matrix_generation.m) builds upon the structure and ideas in his original work. Please refer to his repository for further details and insights.
+This code was inspired by [@GEW_dispersion_script](https://github.com/dakiefer/GEW_dispersion_script) by Daniel Kiefer. In particular, the implementation of the tensor-based matrices and the boundary conditions for a single cortical bone layer (see lines 20–30 in f_matrix_generation.m) builds upon the structure and ideas from his original work. Please refer to his repository for further details and insights.
 
 ## Key Features
 
